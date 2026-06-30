@@ -44,3 +44,17 @@ def action_view_pos_orders(self):
         "view_mode": "list,form",
         "domain": [("project_id", "=", self.id)],
     }
+
+def _loader_params_project_project(self):
+    return {
+        "search_params": {
+            "fields": [
+                "id",
+                "name",
+                "x_partner_id",
+            ],
+        },
+    }
+
+def _get_pos_ui_project_project(self, params):
+    return self.env["project.project"].search_read(**params["search_params"])
