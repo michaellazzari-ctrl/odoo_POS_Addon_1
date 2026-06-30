@@ -15,6 +15,9 @@
     'assets': {
         'point_of_sale._assets_pos': [
             'pos_project/static/src/app/models/order_patch.js',
+            'pos_project/static/src/app/services/project_service.js',
+            'pos_project/static/src/app/buttons/project_button.js',
+            'pos_project/static/src/xml/project_button.xml',
         ],
     },
     'installable': True,
