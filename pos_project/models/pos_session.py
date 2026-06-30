@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 from odoo import models, fields, api
 
 
@@ -12,3 +12,4 @@ def _loader_params_res_partner(self):
     params["search_params"]["fields"].append("x_ADR_ID")
 
     return params
+

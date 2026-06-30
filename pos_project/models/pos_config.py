@@ -1,10 +1,11 @@
-# -*- coding: utf-8 -*-
-from odoo import models, fields, api
+from odoo import fields, models
 
 
 class PosConfig(models.Model):
-    _inherit = 'pos.config'
+    _inherit = "pos.config"
 
-    # Add custom configuration fields here
-    custom_config = fields.Boolean(string='Custom Configuration', default=False)
-    config_parameter = fields.Char(string='Configuration Parameter')
+    project_required = fields.Boolean(
+        string="Project Required",
+        default=False,
+        help="Require a project before validating the payment.",
+    )

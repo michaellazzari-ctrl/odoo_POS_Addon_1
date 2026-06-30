@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+
+    <t t-name="pos_project.ProjectButton">
+
+        <button
+            class="button btn btn-light">
+
+            🏗 Projet
+
+        </button>
+
+    </t>
+
+</templates>

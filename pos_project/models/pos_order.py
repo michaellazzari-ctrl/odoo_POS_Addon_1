@@ -1,4 +1,6 @@
+
 from odoo import api, fields, models
+
 
 
 class PosOrder(models.Model):
@@ -8,7 +10,7 @@ class PosOrder(models.Model):
         "project.project",
         string="Project",
         index=True,
-    )
+
 
     project_name = fields.Char()
 
@@ -20,3 +22,4 @@ class PosOrder(models.Model):
         values["project_name"] = ui_order.get("project_name")
 
         return values
+

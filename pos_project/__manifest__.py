@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
 {
+
     'name': 'POS Project Addon',
     'version': '1.0.0',
     'category': 'Point of Sale',
@@ -22,4 +22,6 @@
     },
     'installable': True,
     'application': False,
+
+
 }
