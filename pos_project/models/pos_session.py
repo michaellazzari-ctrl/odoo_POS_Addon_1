@@ -3,10 +3,9 @@ from odoo import models, fields, api
 
 
 class PosSession(models.Model):
-    _inherit = 'pos.session'
+    _inherit = "pos.session"
 
-    # Add custom fields here
-def _loader_params_res_partner(self):
+    def _loader_params_res_partner(self):
     params = super()._loader_params_res_partner()
 
     params["search_params"]["fields"].append("x_ADR_ID")
