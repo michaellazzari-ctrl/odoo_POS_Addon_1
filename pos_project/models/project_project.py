@@ -33,3 +33,14 @@ class ProjectProject(models.Model):
         for project in self:
             project.pos_order_count = len(project.pos_order_ids)
             project.pos_amount_total = sum(project.pos_order_ids.mapped("amount_total"))
+
+def action_view_pos_orders(self):
+    self.ensure_one()
+
+    return {
+        "type": "ir.actions.act_window",
+        "name": "POS Orders",
+        "res_model": "pos.order",
+        "view_mode": "list,form",
+        "domain": [("project_id", "=", self.id)],
+    }
