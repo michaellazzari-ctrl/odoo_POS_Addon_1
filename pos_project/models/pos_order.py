@@ -1,14 +1,12 @@
-# -*- coding: utf-8 -*-
-from odoo import models, fields, api
+from odoo import fields, models
 
 
 class PosOrder(models.Model):
-    _inherit = 'pos.order'
+    _inherit = "pos.order"
 
-    # Add custom fields here
-    custom_field = fields.Char(string='Custom Field')
-
-    @api.onchange('custom_field')
-    def _onchange_custom_field(self):
-        """Handle changes to custom field"""
-        pass
+    project_id = fields.Many2one(
+        "project.project",
+        string="Project",
+        index=True,
+        ondelete="restrict",
+    )
